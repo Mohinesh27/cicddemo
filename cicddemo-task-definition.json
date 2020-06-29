@@ -1,0 +1,24 @@
+{
+    "family": "cicddemo",
+    "executionRoleArn": "arn:aws:iam::207215998169:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "cicddemo",
+            "image": "207215998169.dkr.ecr.ap-south-1.amazonaws.com/cicddemo-ecr:latest",
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024"
+}
